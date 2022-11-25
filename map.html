@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn-sa.seatsio.net/chart.js"></script>
+
+    <title>seats.io Test</title>
+</head>
+<body>
+    <div id="chart"></div>
+
+</body>
+<script>
+    new seatsio.SeatingChart({
+        divId: 'chart',
+        workspaceKey: '7dc829eb-d66f-4186-8b3c-8582e34726c7',
+        event: 'fdce95ca-b868-49ba-be66-cc5d817694b3',
+        session: 'continue',
+        pricing: [
+           {'category': "Generales", 'price': 30}, 
+           {'category': "Laterales", 'price': 25}, 
+           {'category': "VIP", 'price': 100}
+        ],
+        priceFormatter: function(price) {
+            return 'USD ' + price;
+        }
+    }).render();
+</script>
+</html>
